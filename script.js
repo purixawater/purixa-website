@@ -1,4 +1,4 @@
-const slides=["slide1.png","slide2.png","slide3.png"];
+const slides=["technician.jpg","commercial-ro.jpg","vogue-g-series.jpg"];
 let current=0;
 const heroSlide=document.getElementById("heroSlide");
 if(heroSlide){
