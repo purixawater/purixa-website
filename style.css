@@ -100,3 +100,21 @@ footer{background:#062c48;color:#d5e8f4;padding:24px 0}
   .hero p{font-size:15px;max-width:390px}
   .cta-row .btn{min-height:48px;padding:0 17px}
 }
+
+
+/* Final v2 additions */
+.banner-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.banner-grid a{display:block;background:#fff;border:1px solid #dceaf2;border-radius:18px;overflow:hidden;box-shadow:0 10px 28px rgba(4,61,93,.08);transition:.25s}
+.banner-grid a:hover{transform:translateY(-4px);box-shadow:0 16px 34px rgba(4,61,93,.13)}
+.banner-grid img{width:100%;height:auto;aspect-ratio:1.5;object-fit:cover}
+.booking-section{background:#fff}
+.booking-grid{display:grid;grid-template-columns:1fr 1fr;gap:55px;align-items:start}
+.booking-grid h2{font-family:Poppins,sans-serif;font-size:clamp(32px,4vw,46px);color:#083f68;line-height:1.15;margin:4px 0 18px}
+.service-form{display:grid;gap:14px;background:#f5faff;border:1px solid #dceaf2;border-radius:22px;padding:26px;box-shadow:0 12px 32px rgba(4,61,93,.08)}
+.service-form label{display:grid;gap:7px;color:#173f57;font-weight:700;font-size:14px}
+.service-form input,.service-form select,.service-form textarea{width:100%;border:1px solid #cfe0ea;border-radius:11px;background:#fff;padding:13px 14px;font:inherit;color:#142333;outline:none}
+.service-form input:focus,.service-form select:focus,.service-form textarea:focus{border-color:#0087d8;box-shadow:0 0 0 3px rgba(0,135,216,.12)}
+.service-form textarea{resize:vertical;min-height:90px}
+.service-form small{color:#6c8290;font-size:12px}
+@media(max-width:900px){.banner-grid{grid-template-columns:1fr 1fr}.booking-grid{grid-template-columns:1fr;gap:35px}}
+@media(max-width:720px){.banner-grid{grid-template-columns:1fr}.service-form{padding:20px}.floating-whatsapp{bottom:18px;right:16px;width:58px;height:58px}}

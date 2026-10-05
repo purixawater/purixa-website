@@ -1,4 +1,4 @@
-const slides=["technician.jpg","commercial-ro.jpg","vogue-g-series.jpg"];
+const slides=["technician.webp","commercial-ro.webp","vogue-g-series.webp"];
 let current=0;
 const heroSlide=document.getElementById("heroSlide");
 if(heroSlide){
@@ -27,3 +27,29 @@ window.addEventListener("scroll",()=>{
   if(backTop) backTop.classList.toggle("show",window.scrollY>500);
 });
 if(backTop) backTop.addEventListener("click",()=>window.scrollTo({top:0,behavior:"smooth"}));
+
+
+const serviceForm=document.getElementById("serviceForm");
+if(serviceForm){
+  serviceForm.addEventListener("submit",(event)=>{
+    event.preventDefault();
+    const name=document.getElementById("customerName").value.trim();
+    const mobile=document.getElementById("customerMobile").value.trim();
+    const area=document.getElementById("customerArea").value.trim();
+    const type=document.getElementById("serviceType").value;
+    const message=document.getElementById("serviceMessage").value.trim();
+    if(!/^[0-9]{10}$/.test(mobile)){
+      alert("Please enter a valid 10-digit mobile number.");
+      return;
+    }
+    const text=[
+      "Hello Purixa Water Solution, I want to book RO service.",
+      `Name: ${name}`,
+      `Mobile: ${mobile}`,
+      `Area: ${area}`,
+      `Service: ${type}`,
+      `Requirement: ${message || "Not specified"}`
+    ].join("\n");
+    window.open(`https://wa.me/917016715463?text=${encodeURIComponent(text)}`,"_blank","noopener");
+  });
+}
