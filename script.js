@@ -1,4 +1,4 @@
-const slides=["technician.webp","commercial-ro.webp","vogue-g-series.webp"];
+const slides=["slide1.webp","slide2.webp","slide3.webp"];
 let current=0;
 const heroSlide=document.getElementById("heroSlide");
 if(heroSlide){
