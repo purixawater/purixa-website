@@ -285,3 +285,12 @@ html,body{width:100%;max-width:100%;overflow-x:hidden}
  .floating-whatsapp{width:52px;height:52px;right:14px;bottom:14px;}
  .back-top{right:19px;bottom:78px!important;}
 }
+
+/* v4 additions: catalog and Google business CTAs */
+.hero-extra-actions{display:flex;flex-wrap:wrap;align-items:center;gap:12px;margin-top:18px}
+.hero-extra-actions .text-link{font-weight:700;color:#075da7}
+.review-cta{padding-top:34px;padding-bottom:34px}
+.review-cta-inner{display:flex;align-items:center;justify-content:space-between;gap:24px;padding:28px;border:1px solid #d9e9f4;border-radius:22px;background:linear-gradient(120deg,#f5fbff,#eaf6ff)}
+.review-cta-inner h2{margin:6px 0 8px}
+.review-cta-inner p{margin:0;color:#526779}
+@media(max-width:700px){.hero-extra-actions{align-items:stretch;flex-direction:column}.review-cta-inner{align-items:flex-start;flex-direction:column;padding:22px}}
