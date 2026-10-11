@@ -327,3 +327,69 @@ html,body{width:100%;max-width:100%;overflow-x:hidden}
     bottom:105px !important;
   }
 }
+
+
+/* Professional upgrade: accessibility, refined polish, and mobile conversion */
+:root{scroll-padding-top:88px;--purixa-navy:#082f59;--purixa-blue:#087bc1;--purixa-pale:#f2f9fd;--purixa-line:#dcebf4;}
+body{color:#183247;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;}
+::selection{background:#c9edff;color:#073b60;}
+.skip-link{position:fixed;top:10px;left:10px;z-index:2000;padding:10px 14px;border-radius:10px;background:#fff;color:#073b60;font-weight:800;box-shadow:0 4px 20px rgba(0,0,0,.18);transform:translateY(-160%);}
+.skip-link:focus{transform:translateY(0);}
+:focus-visible{outline:3px solid #f5b700;outline-offset:3px;}
+.site-header{border-bottom:1px solid rgba(8,63,104,.07);}
+.brand{letter-spacing:-.025em;}
+.nav-menu a{padding:9px 0;}
+.nav-menu a:hover,.nav-menu a:focus-visible{color:var(--purixa-blue);}
+.section{scroll-margin-top:88px;}
+.section-heading h2,.split h2,.booking-grid h2{letter-spacing:-.035em;}
+.section-heading p{font-size:16px;line-height:1.75;}
+.service-card,.product-card,.steps>div{border-color:var(--purixa-line);box-shadow:0 8px 26px rgba(4,61,93,.055);}
+.service-card{display:flex;flex-direction:column;align-items:flex-start;}
+.service-card p{line-height:1.7;}
+.service-card>a{margin-top:auto;padding-top:16px;}
+.product-card h3{letter-spacing:-.02em;}
+.product-card p{line-height:1.7;}
+.product-card img{transition:transform .35s ease;}
+.product-card:hover img{transform:scale(1.025);}
+.hero-refresh-visual{box-shadow:0 24px 60px rgba(0,63,103,.12);}
+.hero-refresh-copy h1{letter-spacing:-.045em;}
+.hero-refresh-actions .btn,.contact-actions .btn,.service-form .btn{min-height:50px;}
+.btn{cursor:pointer;}
+.btn-primary{background:linear-gradient(135deg,#087bc1,#075c9f);}
+.btn-primary:hover{box-shadow:0 12px 26px rgba(0,95,159,.25);}
+.btn-whatsapp{background:#1fbd5b;}
+.service-form{box-shadow:0 16px 40px rgba(4,61,93,.07);}
+.service-form input,.service-form select,.service-form textarea{min-height:48px;}
+.service-form small{line-height:1.6;}
+.contact-section{background:radial-gradient(circle at 88% 0%,rgba(41,174,235,.28),transparent 35%),linear-gradient(135deg,#063b64,#087bc1);}
+.contact-info{backdrop-filter:blur(8px);}
+.map-card{background:rgba(255,255,255,.09);}
+.review-cta-inner{box-shadow:0 10px 30px rgba(4,61,93,.04);}
+.footer-social a:hover{text-decoration-thickness:2px;color:#fff;}
+.floating-whatsapp{display:grid;place-items:center;transition:transform .2s ease,box-shadow .2s ease;}
+.floating-whatsapp:hover{transform:translateY(-3px);box-shadow:0 12px 28px rgba(0,0,0,.22);}
+@media(max-width:720px){
+  :root{scroll-padding-top:76px;}
+  .nav-menu{border:1px solid var(--purixa-line);}
+  .hero-refresh{padding-top:84px;}
+  .hero-refresh-visual>img{height:220px;}
+  .section{padding:58px 0;}
+  .section-heading{margin-bottom:30px;}
+  .service-card{padding:23px;}
+  .booking-grid{gap:25px;}
+  .service-form{border-radius:18px;}
+  .review-cta{padding-top:18px;padding-bottom:38px;}
+  .contact-section{padding-top:58px;}
+  .footer-wrap{gap:16px;}
+  .footer-social{gap:9px;}
+}
+@media(prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto;}
+  *,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important;scroll-behavior:auto!important;}
+}
+
+
+/* V7 audit fixes: consistent address visibility and footer navigation */
+.footer-address{display:block;color:#d5e8f4;font-size:13px;line-height:1.6;margin-top:8px;max-width:360px;}
+.footer-map-link{display:inline-block;margin-top:6px;color:#fff;text-decoration:underline;text-underline-offset:3px;font-weight:700;font-size:13px;}
+.footer-map-link:focus-visible{outline:3px solid #f5b700;outline-offset:4px;}

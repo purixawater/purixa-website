@@ -5,12 +5,16 @@ if(menuToggle&&navMenu){
     const open=navMenu.classList.toggle("open");
     menuToggle.setAttribute("aria-expanded",open);
     menuToggle.textContent=open?"✕":"☰";
+    menuToggle.setAttribute("aria-label",open?"Close menu":"Open menu");
   });
-  navMenu.querySelectorAll("a").forEach(a=>a.addEventListener("click",()=>{
+  const closeMenu=()=>{
     navMenu.classList.remove("open");
     menuToggle.setAttribute("aria-expanded","false");
+    menuToggle.setAttribute("aria-label","Open menu");
     menuToggle.textContent="☰";
-  }));
+  };
+  navMenu.querySelectorAll("a").forEach(a=>a.addEventListener("click",closeMenu));
+  document.addEventListener("keydown",event=>{if(event.key==="Escape")closeMenu();});
 }
 const backTop=document.querySelector(".back-top");
 window.addEventListener("scroll",()=>{
@@ -28,6 +32,10 @@ if(serviceForm){
     const area=document.getElementById("customerArea").value.trim();
     const type=document.getElementById("serviceType").value;
     const message=document.getElementById("serviceMessage").value.trim();
+    if(!name||!area||!type){
+      alert("Please complete your name, area and service type.");
+      return;
+    }
     if(!/^[0-9]{10}$/.test(mobile)){
       alert("Please enter a valid 10-digit mobile number.");
       return;
@@ -40,6 +48,8 @@ if(serviceForm){
       `Service: ${type}`,
       `Requirement: ${message || "Not specified"}`
     ].join("\n");
-    window.open(`https://wa.me/917016715463?text=${encodeURIComponent(text)}`,"_blank","noopener");
+    const whatsappUrl=`https://wa.me/917016715463?text=${encodeURIComponent(text)}`;
+    const opened=window.open(whatsappUrl,"_blank","noopener,noreferrer");
+    if(!opened) window.location.href=whatsappUrl;
   });
 }
