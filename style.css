@@ -393,3 +393,30 @@ body{color:#183247;-webkit-font-smoothing:antialiased;text-rendering:optimizeLeg
 .footer-address{display:block;color:#d5e8f4;font-size:13px;line-height:1.6;margin-top:8px;max-width:360px;}
 .footer-map-link{display:inline-block;margin-top:6px;color:#fff;text-decoration:underline;text-underline-offset:3px;font-weight:700;font-size:13px;}
 .footer-map-link:focus-visible{outline:3px solid #f5b700;outline-offset:4px;}
+
+/* V8: restore the original three-banner hero slider */
+.hero-slider-section{min-height:700px;position:relative;display:flex;align-items:center;overflow:hidden;background:#06365d}
+.hero-slider-section .hero-slider{position:absolute;inset:0;overflow:hidden}
+.hero-slider-section .hero-slide{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;transition:opacity .7s ease;display:block}
+.hero-slider-section .hero-slide.active{opacity:1}
+.hero-slider-section .hero-overlay{position:absolute;inset:0;background:linear-gradient(90deg,rgba(2,26,48,.84),rgba(0,70,120,.48),rgba(0,0,0,.12));z-index:1}
+.hero-slider-section .hero-content{position:relative;z-index:2;color:#fff;padding-top:70px;padding-bottom:70px}
+.hero-slider-section .hero-content h1{font-family:Poppins,sans-serif;font-size:clamp(42px,6vw,72px);line-height:1.05;max-width:760px;margin:16px 0 20px;color:#fff}
+.hero-slider-section .hero-content h1 span{color:#62d9ff}
+.hero-slider-section .hero-content p{font-size:19px;max-width:650px;color:#e7f5ff;margin-bottom:20px}
+.hero-slider-section .hero-content .gujarati-line{font-weight:700}
+.hero-slider-section .hero-points{display:flex;flex-wrap:wrap;gap:18px;margin-top:25px;font-size:14px;color:#e9f8ff}
+.hero-slider-controls{position:absolute;z-index:3;right:5%;bottom:28px;display:flex;align-items:center;gap:12px}
+.hero-slider-controls button{cursor:pointer;border:1px solid rgba(255,255,255,.75);color:#fff;background:rgba(3,40,70,.55);border-radius:50%;width:38px;height:38px;font-size:22px;display:flex;align-items:center;justify-content:center}
+.hero-slider-controls .hero-dots{display:flex;gap:8px}
+.hero-slider-controls .hero-dot{width:11px;height:11px;padding:0;border-radius:50%;font-size:0}
+.hero-slider-controls .hero-dot.active{background:#fff}
+@media(max-width:720px){
+ .hero-slider-section{min-height:620px;align-items:flex-end}
+ .hero-slider-section .hero-content{padding-top:90px;padding-bottom:92px}
+ .hero-slider-section .hero-content h1{font-size:clamp(36px,10vw,48px)}
+ .hero-slider-section .hero-content p{font-size:16px}
+ .hero-slider-section .hero-points{display:grid;gap:8px}
+ .hero-slider-controls{right:50%;transform:translateX(50%);bottom:24px}
+}
+@media(prefers-reduced-motion:reduce){.hero-slider-section .hero-slide{transition:none}}
