@@ -1,13 +1,3 @@
-const slides=["slide1.webp","slide2.webp","slide3.webp"];
-let current=0;
-const heroSlide=document.getElementById("heroSlide");
-if(heroSlide){
-  setInterval(()=>{
-    current=(current+1)%slides.length;
-    heroSlide.style.opacity="0";
-    setTimeout(()=>{heroSlide.src=slides[current];heroSlide.style.opacity="1"},180);
-  },4500);
-}
 const menuToggle=document.querySelector(".menu-toggle");
 const navMenu=document.querySelector(".nav-menu");
 if(menuToggle&&navMenu){

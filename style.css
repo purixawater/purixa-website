@@ -12,10 +12,10 @@ a{text-decoration:none;color:inherit}
 .nav-menu a{font-weight:600;font-size:14px;color:#263b4c;transition:.25s}
 .nav-menu a:hover{color:#0087d8}
 .menu-toggle{display:none;border:0;background:#eef7fc;color:#075c9f;font-size:24px;padding:8px 12px;border-radius:10px}
-.hero{min-height:395px;position:relative;display:flex;align-items:center;overflow:hidden}
+.hero{min-height:700px;position:relative;display:flex;align-items:center;overflow:hidden}
 .hero-slider,.hero-slider img,.hero-overlay{position:absolute;inset:0;width:100%;height:100%}
 .hero-slider img{object-fit:cover;transition:opacity .5s}
-.hero-overlay{background:transparent}
+.hero-overlay{background:linear-gradient(90deg,rgba(2,26,48,.82),rgba(0,89,148,.42),rgba(0,0,0,.18))}
 .hero-content{position:relative;z-index:2;color:#fff;padding-top:70px}
 .eyebrow,.section-kicker{display:inline-block;font-size:12px;letter-spacing:2px;font-weight:800;color:#0086d5;margin-bottom:12px}
 .eyebrow{color:#bdeaff}
@@ -175,6 +175,65 @@ html,body{width:100%;max-width:100%;overflow-x:hidden}
   .hero-slider img{object-fit:cover}
 }
 
-/* Refresh: use new branded hero banner artwork; reduce overlay clutter */
-.hero-content{display:none!important}.hero-slider img{object-fit:cover;object-position:center center}
-@media(max-width:700px){.hero{min-height:230px}.hero-slider img{object-fit:cover;object-position:center center}.product-card img{object-fit:cover}}
+
+/* Premium refresh: clean hero, less repetitive imagery, clearer mobile actions */
+.hero-clean{height:auto;min-height:0;padding:54px 0 48px;background:radial-gradient(circle at 78% 40%,#d8f2ff 0,#f3fbff 42%,#fff 78%);color:#0a3155;overflow:hidden}
+.hero-layout{display:grid;grid-template-columns:1.05fr .95fr;align-items:center;gap:34px}
+.hero-clean .hero-content{position:relative;inset:auto;max-width:none;padding:0;color:#0a3155}
+.hero-clean .eyebrow{color:#0877bd;font-weight:800;letter-spacing:.12em;font-size:13px}
+.hero-clean h1{font-size:clamp(40px,5vw,64px);line-height:1.04;color:#082f59;margin:16px 0}
+.hero-clean h1 span{color:#087bc1}
+.hero-clean p{font-size:18px;line-height:1.65;color:#526a7b;max-width:580px}
+.gujarati-line{font-weight:700;color:#075b99!important;font-size:21px!important;margin:8px 0 14px}
+.experience-pill{display:inline-flex;background:#073c70;color:#fff;border-radius:999px;padding:11px 17px;font-weight:700;font-size:14px;margin:4px 0 20px}
+.hero-clean .hero-points{display:flex;flex-wrap:wrap;gap:12px 18px;margin-top:20px;color:#18445f;font-size:13px;font-weight:700}
+.hero-clean .cta-row{display:flex;flex-wrap:wrap;gap:10px}
+.btn-outline{background:#fff;color:#075b99;border:1px solid #0b79bd}
+.hero-product{position:relative;min-width:0}
+.hero-product>img{width:100%;max-height:440px;object-fit:contain;border-radius:24px;mix-blend-mode:multiply}
+.hero-product-note{display:flex;align-items:center;gap:12px;position:absolute;bottom:12px;left:4%;background:#fff;border:1px solid #d7eaf5;border-radius:15px;padding:13px 17px;box-shadow:0 10px 30px rgba(8,55,88,.12)}
+.hero-product-note>span{font-size:26px}.hero-product-note strong,.hero-product-note small{display:block}.hero-product-note small{color:#657c8d;margin-top:3px}
+.quick-strip{background:#07558d;color:#fff}.quick-grid div{border-color:rgba(255,255,255,.18)}
+.service-card,.product-card{transition:transform .2s ease,box-shadow .2s ease}.service-card:hover,.product-card:hover{transform:translateY(-3px);box-shadow:0 14px 32px rgba(4,61,93,.12)}
+.product-card img{background:#f7fbfe;object-fit:contain;padding:10px}
+.floating-whatsapp{z-index:30;box-shadow:0 8px 24px rgba(0,0,0,.16)}.back-top{z-index:29;right:18px;bottom:88px}
+@media(max-width:720px){.hero-clean{padding:28px 0 30px}.hero-layout{grid-template-columns:1fr;gap:18px}.hero-clean .hero-content{display:block;padding:0}.hero-clean h1{font-size:38px;margin:10px 0}.hero-clean p{font-size:15px;line-height:1.55}.hero-clean .eyebrow{font-size:11px}.hero-product{grid-row:1}.hero-product>img{max-height:245px;width:100%;object-fit:contain}.hero-product-note{bottom:4px;left:3%;padding:8px 10px;border-radius:12px}.hero-product-note>span{font-size:20px}.hero-product-note strong{font-size:12px}.hero-product-note small{font-size:10px}.experience-pill{font-size:12px;padding:9px 12px}.hero-clean .cta-row{display:grid;grid-template-columns:1fr 1fr}.hero-clean .cta-row .btn{padding:0 10px;min-height:46px;font-size:13px}.hero-clean .cta-row .btn-outline{grid-column:1/-1}.hero-clean .hero-points{gap:8px 12px;font-size:11px}.back-top{right:12px;bottom:78px}.floating-whatsapp{right:13px;bottom:13px}}
+
+
+/* October 2026 refresh: new banner/photos, clearer mobile layout, accurate map handoff */
+.hero-refresh{padding-top:78px;background:#f2faff}
+.hero-banner-desktop{display:block;width:100%;height:auto;max-height:none;object-fit:contain}
+.mobile-hero{display:none}
+.map-wrap{margin-top:28px}
+.map-card{display:flex;align-items:center;gap:22px;padding:28px;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.3);border-radius:20px}
+.map-pin{font-size:42px;flex:0 0 auto}
+.map-card h3{font-family:Poppins,sans-serif;color:#fff;font-size:24px;margin:0 0 8px}
+.map-card p{margin:0 0 18px;color:#e3f4ff;line-height:1.6}
+.map-card .btn{display:inline-flex;width:auto;min-height:46px;padding:0 18px;align-items:center;justify-content:center}
+.product-card img{object-fit:contain;background:#f4faff;padding:12px;aspect-ratio:1.6;height:auto;max-height:290px}
+.gallery-grid img{object-fit:contain;background:#f4faff}
+.back-top{bottom:96px!important}
+@media(max-width:720px){
+  .hero-refresh{padding:68px 0 0;background:#f1f9fe}
+  .hero-banner-desktop{display:none}
+  .mobile-hero{display:block;padding:26px 18px 28px;text-align:center}
+  .mobile-hero .section-kicker{display:block;font-size:11px;letter-spacing:.12em;margin-bottom:8px}
+  .mobile-hero h1{font-family:Poppins,sans-serif;font-size:32px;line-height:1.12;color:#082f59;margin:8px 0 12px}
+  .mobile-hero h1 span{color:#087bc1}
+  .mobile-hero>p:not(.gujarati-line){font-size:15px;line-height:1.55;color:#526a7b;margin:0 auto 8px;max-width:440px}
+  .mobile-hero .gujarati-line{font-size:18px!important;margin:7px 0 12px}
+  .mobile-hero>img{display:block;width:min(100%,360px);height:190px;object-fit:contain;margin:0 auto 12px;background:#fff;border-radius:18px}
+  .mobile-hero-actions{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+  .mobile-hero-actions .btn{font-size:13px;min-height:48px;padding:0 8px;justify-content:center}
+  .mobile-trust{font-size:11px;color:#15547b;font-weight:700;line-height:1.5;margin-top:13px}
+  .product-card img{height:auto;max-height:245px;aspect-ratio:1.6;object-fit:contain;padding:8px}
+  .gallery-grid img{height:auto;aspect-ratio:1.15;object-fit:contain;padding:5px}
+  .map-wrap{padding:0 14px;margin-top:22px}
+  .map-card{align-items:flex-start;padding:20px 16px;gap:12px;border-radius:16px}
+  .map-pin{font-size:30px}
+  .map-card h3{font-size:19px}
+  .map-card p{font-size:14px;line-height:1.5}
+  .map-card .btn{font-size:13px;white-space:normal}
+  .back-top{right:14px;bottom:92px!important}
+  .floating-whatsapp{right:14px;bottom:14px}
+}
