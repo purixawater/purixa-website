@@ -294,3 +294,36 @@ html,body{width:100%;max-width:100%;overflow-x:hidden}
 .review-cta-inner h2{margin:6px 0 8px}
 .review-cta-inner p{margin:0;color:#526779}
 @media(max-width:700px){.hero-extra-actions{align-items:stretch;flex-direction:column}.review-cta-inner{align-items:flex-start;flex-direction:column;padding:22px}}
+
+
+/* V5 mobile audit fixes: consistent spacing for floating controls */
+.floating-whatsapp{
+  z-index:1001;
+}
+.back-top{
+  z-index:1000;
+}
+@media (max-width:720px){
+  .floating-whatsapp{
+    right:16px !important;
+    bottom:18px !important;
+    width:56px !important;
+    height:56px !important;
+  }
+  .back-top{
+    right:23px !important;
+    bottom:96px !important;
+    width:42px !important;
+    height:42px !important;
+  }
+}
+@media (min-width:721px){
+  .floating-whatsapp{
+    right:24px;
+    bottom:24px;
+  }
+  .back-top{
+    right:31px;
+    bottom:105px !important;
+  }
+}

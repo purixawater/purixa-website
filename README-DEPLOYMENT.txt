@@ -1,4 +1,4 @@
-PURIXA WATER SOLUTION — WEBSITE UPGRADE V4
+PURIXA WATER SOLUTION — WEBSITE MOBILE AUDIT FIX V5
 
 Included:
 - index.html, style.css, script.js
@@ -29,3 +29,9 @@ Deploy:
 - Upload the contents (not the containing folder) into the root of the purixa-website repository.
 - Replace matching files and commit changes.
 - Wait for GitHub Pages to deploy, then test call, WhatsApp, form, catalog, menu, and map links.
+
+
+V5 update:
+- Adjusted the floating WhatsApp and back-to-top controls to provide more separation on mobile.
+- This ZIP has not been published to GitHub Pages. Upload the extracted files to the website repository to apply the changes.
+- The Google feedback button still opens a Google Maps search, not a direct review URL. Replace it only after confirming the exact review link from the verified Google Business Profile.
