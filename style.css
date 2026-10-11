@@ -420,3 +420,21 @@ body{color:#183247;-webkit-font-smoothing:antialiased;text-rendering:optimizeLeg
  .hero-slider-controls{right:50%;transform:translateX(50%);bottom:24px}
 }
 @media(prefers-reduced-motion:reduce){.hero-slider-section .hero-slide{transition:none}}
+
+/* V9: single static homepage hero banner (no slider) */
+.hero-single-section{min-height:700px;position:relative;display:flex;align-items:center;overflow:hidden;background:#06365d}
+.hero-single-section .hero-single-image{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block}
+.hero-single-section .hero-single-overlay{position:absolute;inset:0;background:linear-gradient(90deg,rgba(2,26,48,.84),rgba(0,70,120,.48),rgba(0,0,0,.12));z-index:1}
+.hero-single-section .hero-content{position:relative;z-index:2;color:#fff;padding-top:70px;padding-bottom:70px}
+.hero-single-section .hero-content h1{font-family:Poppins,sans-serif;font-size:clamp(42px,6vw,72px);line-height:1.05;max-width:760px;margin:16px 0 20px;color:#fff}
+.hero-single-section .hero-content h1 span{color:#62d9ff}
+.hero-single-section .hero-content p{font-size:19px;max-width:650px;color:#e7f5ff;margin-bottom:20px}
+.hero-single-section .hero-content .gujarati-line{font-weight:700}
+.hero-single-section .hero-points{display:flex;flex-wrap:wrap;gap:18px;margin-top:25px;font-size:14px;color:#e9f8ff}
+@media(max-width:720px){
+ .hero-single-section{min-height:620px;align-items:flex-end}
+ .hero-single-section .hero-content{padding-top:90px;padding-bottom:60px}
+ .hero-single-section .hero-content h1{font-size:clamp(36px,10vw,48px)}
+ .hero-single-section .hero-content p{font-size:16px}
+ .hero-single-section .hero-points{display:grid;gap:8px}
+}

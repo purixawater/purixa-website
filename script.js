@@ -53,30 +53,3 @@ if(serviceForm){
     if(!opened) window.location.href=whatsappUrl;
   });
 }
-
-// Three-banner hero slider: autoplay, dots and manual controls.
-(()=>{
- const section=document.querySelector(".hero-slider-section");
- if(!section) return;
- const slides=[...section.querySelectorAll(".hero-slide")];
- const dots=[...section.querySelectorAll(".hero-dot")];
- const prev=section.querySelector(".hero-prev"), next=section.querySelector(".hero-next");
- if(slides.length!==3 || dots.length!==3) return;
- let index=0, timer=null;
- const show=(n)=>{
-   index=(n+slides.length)%slides.length;
-   slides.forEach((slide,i)=>{slide.classList.toggle("active",i===index);slide.setAttribute("aria-hidden",i===index?"false":"true");});
-   dots.forEach((dot,i)=>{dot.classList.toggle("active",i===index);if(i===index)dot.setAttribute("aria-current","true");else dot.removeAttribute("aria-current");});
- };
- const stop=()=>{if(timer)window.clearInterval(timer);timer=null;};
- const start=()=>{stop();if(!window.matchMedia("(prefers-reduced-motion: reduce)").matches)timer=window.setInterval(()=>show(index+1),5000);};
- prev?.addEventListener("click",()=>{show(index-1);start();});
- next?.addEventListener("click",()=>{show(index+1);start();});
- dots.forEach((dot,i)=>dot.addEventListener("click",()=>{show(i);start();}));
- section.addEventListener("mouseenter",stop);
- section.addEventListener("mouseleave",start);
- section.addEventListener("focusin",stop);
- section.addEventListener("focusout",start);
- document.addEventListener("visibilitychange",()=>document.hidden?stop():start());
- show(0);start();
-})();
