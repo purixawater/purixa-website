@@ -1,7 +1,8 @@
-PURIXA WATER SOLUTION — PROFESSIONAL WEBSITE V7
+PURIXA WATER SOLUTION — PREMIUM BUSINESS + CATALOGUE WEBSITE V10
 
 STATUS
 - Review package only. NOT published to GitHub Pages.
+- This ZIP contains a proposed upgrade; it does not change the live website until uploaded to the correct GitHub Pages repository.
 - Based on the supplied purixa-website-main ZIP and existing files.
 
 PRESERVED
@@ -12,13 +13,17 @@ PRESERVED
 - Existing GitHub Pages canonical URL: https://purixawater.github.io/purixa-website/
 - Existing page sections, FAQ, WhatsApp service request form, social links, robots.txt and sitemap.
 
-V7 AUDIT FIXES
+V10 UPGRADE NOTES
 - Address standardized to: Madhav Complex, Near SBI Bank, Canal Road, Rajkot, Gujarat.
 - Footer now repeats the business address and offers a Google Maps search link.
 - Maps buttons use the same address query.
 - Fixed visible overlapping/duplicate address overlays on the catalog cover and final page; other catalog pages were retained.
 - Existing product visuals were retained; no AI-generated product photos were added.
 - The website review CTA clearly says it opens Google Maps, not a direct review form.
+- Added a fourth product card for filters and spare parts, with a WhatsApp enquiry action.
+- Added a prominent digital catalogue CTA and catalogue link in navigation.
+- Refined product cards, keyboard focus styles, reduced-motion support and small-screen catalogue layout.
+- Kept product imagery real/existing; no AI-generated product photos were added.
 
 VALIDATION PERFORMED
 - JavaScript syntax check passed with Node.js.

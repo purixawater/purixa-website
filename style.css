@@ -438,3 +438,38 @@ body{color:#183247;-webkit-font-smoothing:antialiased;text-rendering:optimizeLeg
  .hero-single-section .hero-content p{font-size:16px}
  .hero-single-section .hero-points{display:grid;gap:8px}
 }
+
+
+/* Purixa premium business + catalogue upgrade — October 2026 */
+:root{scroll-padding-top:88px}
+.site-header{border-bottom:1px solid rgba(7,92,159,.08)}
+.nav-menu a{white-space:nowrap}
+.nav-menu a:focus-visible,.btn:focus-visible,.text-link:focus-visible,summary:focus-visible{outline:3px solid #36b9f4;outline-offset:3px}
+.section-kicker{letter-spacing:.14em}
+.section-heading h2,.split h2,.booking-grid h2{letter-spacing:-.025em}
+.service-card,.product-card,.steps>div{border-color:#e1edf5;box-shadow:0 8px 28px rgba(4,61,93,.055)}
+.product-card{display:flex;flex-direction:column}
+.product-card>div{display:flex;flex:1;flex-direction:column;align-items:flex-start}
+.product-card .text-link{margin-top:auto;padding-top:16px}
+.product-card img{background:linear-gradient(145deg,#f7fcff,#eaf6fd);}
+.catalog-cta{display:flex;align-items:center;justify-content:space-between;gap:24px;margin-top:32px;padding:28px 30px;border:1px solid #d7eaf6;border-radius:22px;background:linear-gradient(115deg,#eef9ff,#fff 70%);box-shadow:0 12px 30px rgba(4,61,93,.05)}
+.catalog-cta h3{font-family:Poppins,sans-serif;color:#083f68;font-size:clamp(20px,2.5vw,28px);line-height:1.2;margin:0 0 8px}
+.catalog-cta p{color:#617587;font-size:14px}
+.catalog-cta .section-kicker{margin-bottom:6px}
+.catalog-actions{display:flex;flex-wrap:wrap;gap:10px;flex-shrink:0}
+.btn-outline{background:#fff;color:#075b99;border:1px solid #a9d4eb}
+.btn-outline:hover{background:#f2faff}
+.service-form .btn{cursor:pointer}
+footer .footer-social{display:grid;gap:6px;text-align:right}
+.footer-social a{color:#d5e8f4}
+.footer-social a:hover{color:#7cdbff}
+@media(max-width:900px){.catalog-cta{align-items:flex-start;flex-direction:column}.catalog-actions{width:100%}}
+@media(max-width:720px){
+  .nav-menu{max-height:calc(100vh - 75px);overflow-y:auto}
+  .catalog-cta{padding:22px 18px;gap:16px;margin-top:24px}
+  .catalog-actions{display:grid;grid-template-columns:1fr;width:100%}
+  .catalog-actions .btn{width:100%;min-height:48px}
+  .footer-social{text-align:left!important}
+  .product-card>div{padding:20px}
+}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{transition-duration:.01ms!important;animation-duration:.01ms!important;scroll-behavior:auto!important}}
