@@ -1,4 +1,4 @@
-PURIXA WATER SOLUTION — PREMIUM BUSINESS + CATALOGUE WEBSITE V10
+PURIXA WATER SOLUTION — PREMIUM BUSINESS + CATALOGUE WEBSITE V11
 
 STATUS
 - Review package only. NOT published to GitHub Pages.
@@ -13,8 +13,8 @@ PRESERVED
 - Existing GitHub Pages canonical URL: https://purixawater.github.io/purixa-website/
 - Existing page sections, FAQ, WhatsApp service request form, social links, robots.txt and sitemap.
 
-V10 UPGRADE NOTES
-- Address standardized to: Madhav Complex, Near SBI Bank, Canal Road, Rajkot, Gujarat.
+V11 UPGRADE NOTES
+- Address standardized to: Near Harihar Chowk, Sadar Bazar, Sadar, Rajkot, Gujarat 360001.
 - Footer now repeats the business address and offers a Google Maps search link.
 - Maps buttons use the same address query.
 - Fixed visible overlapping/duplicate address overlays on the catalog cover and final page; other catalog pages were retained.
@@ -23,6 +23,9 @@ V10 UPGRADE NOTES
 - Added a fourth product card for filters and spare parts, with a WhatsApp enquiry action.
 - Added a prominent digital catalogue CTA and catalogue link in navigation.
 - Refined product cards, keyboard focus styles, reduced-motion support and small-screen catalogue layout.
+- Added a fixed mobile Call/WhatsApp contact bar to make enquiries easier on phones.
+- Updated business address and Google Maps search links to the owner-provided address.
+- Updated page title and meta description for clearer local search context.
 - Kept product imagery real/existing; no AI-generated product photos were added.
 
 VALIDATION PERFORMED
