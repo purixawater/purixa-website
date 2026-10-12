@@ -1,4 +1,4 @@
-PURIXA WATER SOLUTION — PREMIUM BUSINESS + CATALOGUE WEBSITE V10
+PURIXA WATER SOLUTION — PREMIUM BUSINESS + CATALOGUE WEBSITE V11 — AUDIT FIXES
 
 STATUS
 - Review package only. NOT published to GitHub Pages.
@@ -6,7 +6,7 @@ STATUS
 - Based on the supplied purixa-website-main ZIP and existing files.
 
 PRESERVED
-- Existing Purixa logo, product/service images, product gallery and all 18 catalog pages.
+- Existing Purixa logo, product/service images, product gallery and all 18 catalogue PDF pages.
 - Call number: 9998267304
 - WhatsApp number: 7016715463
 - Email: purixawatersolution@gmail.com
@@ -23,13 +23,18 @@ V10 UPGRADE NOTES
 - Added a fourth product card for filters and spare parts, with a WhatsApp enquiry action.
 - Added a prominent digital catalogue CTA and catalogue link in navigation.
 - Refined product cards, keyboard focus styles, reduced-motion support and small-screen catalogue layout.
+- Fixed catalogue page HTML that contained literal \n characters instead of actual line breaks.
+- Added catalogue PDF download button and generated missing page previews 15–18 from the existing original PDF.
+- Updated homepage social preview/structured-data image and preload to use the actual single static hero banner (slide1.webp).
+- Added catalogue.html to sitemap.xml.
 - Kept product imagery real/existing; no AI-generated product photos were added.
 
 VALIDATION PERFORMED
 - JavaScript syntax check passed with Node.js.
 - Duplicate HTML IDs: none found.
 - Relative local asset references: 14 checked; none missing.
-- Catalog remains 18 pages.
+- PDF metadata confirms 18 pages; catalogue viewer now contains 18 page previews.
+- Verified catalogue HTML has no literal \n separators and all 18 referenced page images exist.
 
 REMAINING BEFORE PUBLISH
 1. Confirm the Google Maps search result opens the exact verified Purixa Business Profile on a real phone.
