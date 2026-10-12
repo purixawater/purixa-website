@@ -491,12 +491,14 @@ footer .footer-social{display:grid;gap:6px;text-align:right}
     inset:auto;
     display:block;
     width:100%;
-    height:auto;
-    max-height:none;
-    object-fit:contain;
-    object-position:center;
+    height:clamp(210px, 58vw, 300px);
+    max-height:300px;
+    object-fit:cover;
+    object-position:center center;
     flex:none;
+    background:#eaf7ff;
   }
+  /* Mobile banner: taller, readable central brand and contact area; one static image only. */
   .hero-single-section .hero-single-overlay{display:none}
   .hero-single-section .hero-content{
     width:100%;
