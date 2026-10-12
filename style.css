@@ -519,3 +519,34 @@ footer .footer-social{display:grid;gap:6px;text-align:right}
   .hero-single-section .hero-content{padding-left:16px;padding-right:16px}
   .hero-single-section .hero-content h1{font-size:29px}
 }
+
+
+/* V15: mobile hero banner height correction — show the complete original banner without cropping */
+@media (max-width: 720px) {
+  .hero-single-section {
+    display: block !important;
+    height: auto !important;
+    min-height: 0 !important;
+    padding: 0 !important;
+    overflow: visible !important;
+    align-items: initial !important;
+  }
+  .hero-single-section .hero-single-image {
+    position: relative !important;
+    inset: auto !important;
+    display: block !important;
+    width: 100% !important;
+    height: auto !important;
+    min-height: 0 !important;
+    max-height: none !important;
+    aspect-ratio: auto !important;
+    object-fit: contain !important;
+    object-position: center !important;
+  }
+  .hero-single-section .hero-single-overlay { display: none !important; }
+  .hero-single-section .hero-content {
+    position: relative !important;
+    z-index: 1 !important;
+    padding: 24px 20px 28px !important;
+  }
+}
