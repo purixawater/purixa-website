@@ -473,3 +473,47 @@ footer .footer-social{display:grid;gap:6px;text-align:right}
   .product-card>div{padding:20px}
 }
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{transition-duration:.01ms!important;animation-duration:.01ms!important;scroll-behavior:auto!important}}
+
+/* V13: mobile fixes based on Arvind's screenshots — keep one static banner */
+@media (max-width:720px){
+  .hero-single-section{
+    display:flex;
+    flex-direction:column;
+    align-items:stretch;
+    justify-content:flex-start;
+    min-height:0;
+    height:auto;
+    padding:0;
+    overflow:hidden;
+  }
+  .hero-single-section .hero-single-image{
+    position:relative;
+    inset:auto;
+    display:block;
+    width:100%;
+    height:auto;
+    max-height:none;
+    object-fit:contain;
+    object-position:center;
+    flex:none;
+  }
+  .hero-single-section .hero-single-overlay{display:none}
+  .hero-single-section .hero-content{
+    width:100%;
+    padding:26px 20px 30px;
+    margin:0;
+    background:linear-gradient(135deg,#06365d,#087bb8);
+    color:#fff;
+  }
+  .hero-single-section .hero-content h1{font-size:clamp(30px,8vw,42px);line-height:1.12;margin:8px 0 14px;max-width:none}
+  .hero-single-section .hero-content p{font-size:16px;line-height:1.55;max-width:none}
+  .hero-single-section .hero-points{display:grid;grid-template-columns:1fr;gap:9px;font-size:13px}
+  .hero-single-section .hero-refresh-actions{display:grid;grid-template-columns:1fr;gap:10px}
+  .hero-single-section .hero-refresh-actions .btn{width:100%;min-height:48px}
+  .floating-whatsapp{right:14px!important;bottom:14px!important;width:54px!important;height:54px!important;z-index:1001}
+  .back-top{right:20px!important;bottom:86px!important;width:42px!important;height:42px!important;z-index:1000}
+}
+@media (max-width:380px){
+  .hero-single-section .hero-content{padding-left:16px;padding-right:16px}
+  .hero-single-section .hero-content h1{font-size:29px}
+}
