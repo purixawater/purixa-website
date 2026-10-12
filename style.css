@@ -473,21 +473,3 @@ footer .footer-social{display:grid;gap:6px;text-align:right}
   .product-card>div{padding:20px}
 }
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{transition-duration:.01ms!important;animation-duration:.01ms!important;scroll-behavior:auto!important}}
-
-
-/* V10 mobile conversion bar and finishing touches */
-html{scroll-padding-top:92px}
-.site-header{backdrop-filter:saturate(160%) blur(12px)}
-.brand img{object-fit:contain}
-.btn,.service-card,.product-card,.gallery-grid img{transition:transform .22s ease,box-shadow .22s ease,border-color .22s ease}
-@media(hover:hover){.service-card:hover,.product-card:hover{transform:translateY(-4px);box-shadow:0 16px 36px rgba(4,61,93,.11)}.gallery-grid img:hover{transform:scale(1.015)}}
-.mobile-contact-bar{display:none}
-@media(max-width:720px){
-  body{padding-bottom:64px}
-  .mobile-contact-bar{position:fixed;z-index:1000;left:0;right:0;bottom:0;display:grid;grid-template-columns:1fr 1fr;gap:8px;padding:9px 12px calc(9px + env(safe-area-inset-bottom));background:rgba(255,255,255,.97);border-top:1px solid #d7eaf6;box-shadow:0 -8px 24px rgba(3,42,70,.12);backdrop-filter:blur(12px)}
-  .mobile-contact-bar a{display:flex;align-items:center;justify-content:center;min-height:44px;border-radius:12px;font-weight:800;text-decoration:none;background:#075c9f;color:#fff}
-  .mobile-contact-bar a+ a{background:#138b55}
-  .floating-whatsapp{bottom:82px}
-  .back-top{bottom:82px}
-}
-@media(prefers-reduced-motion:reduce){.btn,.service-card,.product-card,.gallery-grid img{transition:none}}
