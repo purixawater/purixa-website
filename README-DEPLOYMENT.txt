@@ -45,3 +45,5 @@ REMAINING BEFORE PUBLISH
 
 DEPLOYMENT
 Extract this ZIP and upload the CONTENTS of purixa-website-main (not the enclosing folder) to the root of the existing purixa-website repository only after reviewing and approving the package. Keep a copy of the current live files first.
+
+Mobile banner fix v16: mobile viewport uses a taller 280px banner area; wide source image is centered and side-cropped. Desktop remains unchanged.
