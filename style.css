@@ -685,3 +685,20 @@ footer{background:linear-gradient(120deg,#041f34,#073858)}
  .quick-grid div{padding:14px 8px}
 }
 @media(prefers-reduced-motion:reduce){*,*:before,*:after{scroll-behavior:auto!important;transition:none!important}}
+
+/* Final polish: real product-first presentation, responsive banner without cropping */
+:root{scroll-padding-top:88px}
+.site-header{border-bottom:1px solid rgba(8,93,150,.09)}
+.brand img{object-fit:contain}
+.nav-menu a{transition:color .2s ease,background .2s ease}
+.section-heading h2{letter-spacing:-.035em}
+.product-card img{object-fit:contain!important;padding:16px;background:#fff}
+.gallery-grid img{object-fit:contain;background:#f5fbff;border:1px solid #e2eef6;border-radius:16px;padding:8px}
+.purixa-carousel .purixa-slide{object-fit:contain!important;object-position:center center!important;background:#eef8fc}
+@media(max-width:720px){
+ .hero.hero-slider-section{padding-top:58px}
+ .hero-slider-section:has(.purixa-carousel){height:auto!important;min-height:0!important}
+ .purixa-slides{aspect-ratio:4/3!important;min-height:0!important;max-height:none!important}
+ .purixa-carousel .purixa-slide{object-fit:contain!important;object-position:center center!important}
+ .product-card img{aspect-ratio:1/1;height:auto!important;padding:12px}
+}
