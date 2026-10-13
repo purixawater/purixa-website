@@ -61,3 +61,10 @@ V18 CORRECTION
 - Corrected banner order: slide 1 logo + water splash only; slide 2 water + RO products; slide 3 detailed promotional banner.
 - Added a final responsive carousel CSS override to resolve conflicting legacy hero styles.
 - Still requires deployment and real-phone verification; not published automatically.
+
+
+Professional update notes (October 2026):
+- Kept the existing Purixa branding, website content and original 14 catalogue page images.
+- Added a final responsive CSS layer for refined spacing, card styling and keyboard focus states.
+- Fixed the three-slide banner to preserve the complete wide banner artwork on mobile using the original banner aspect ratio and object-fit: contain.
+- Please preview on mobile and desktop before publishing; GitHub Pages is not updated automatically by this ZIP.

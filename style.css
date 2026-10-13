@@ -623,35 +623,44 @@ footer .footer-social{display:grid;gap:6px;text-align:right}
 @media(prefers-reduced-motion:reduce) { .purixa-carousel .purixa-slide { transition:none !important; } }
 
 
-/* Mobile banner correction: preserve the complete banner artwork without cropping. */
-@media (max-width: 720px) {
-  .hero-slider-section.purixa-hero,
-  .hero-slider-section:has(.purixa-carousel) {
-    display: block !important;
-    width: 100% !important;
-    height: auto !important;
-    min-height: 0 !important;
-    aspect-ratio: 2073 / 758 !important;
-    padding: 0 !important;
-    overflow: hidden !important;
-  }
-  .hero-slider-section .purixa-carousel,
-  .hero-slider-section .purixa-slides {
-    position: relative !important;
-    width: 100% !important;
-    height: 100% !important;
-    min-height: 0 !important;
-    aspect-ratio: auto !important;
-  }
-  .hero-slider-section .purixa-carousel .purixa-slide {
-    position: absolute !important;
-    inset: 0 !important;
-    display: block !important;
-    width: 100% !important;
-    height: 100% !important;
-    min-width: 0 !important;
-    min-height: 0 !important;
-    object-fit: contain !important;
-    object-position: center center !important;
-  }
+/* Purixa premium polish + safe responsive banner (October 2026)
+   Keep the existing brand assets and original desktop layout. */
+:root{--purixa-navy:#073b63;--purixa-blue:#087fc1;--purixa-cyan:#37c7ee;--purixa-ink:#17364c;--purixa-muted:#62798a;--purixa-line:#e1edf4;--purixa-soft:#f4faff}
+body{color:var(--purixa-ink);-webkit-font-smoothing:antialiased}
+.site-header{border-bottom:1px solid rgba(7,74,116,.08)}
+.brand{letter-spacing:-.25px}
+.nav-menu a{position:relative;white-space:nowrap}
+.nav-menu a:hover{color:var(--purixa-blue)}
+.nav-menu a:focus-visible,.btn:focus-visible,.menu-toggle:focus-visible,.carousel-arrow:focus-visible,.carousel-dot:focus-visible{outline:3px solid #58d6f5;outline-offset:3px}
+.section-heading h2,.contact-section h2{letter-spacing:-.7px}
+.service-card,.product-card,.steps>div{border-color:var(--purixa-line);box-shadow:0 8px 26px rgba(4,61,93,.055)}
+.service-card,.product-card{border-radius:18px}
+.service-card a,.text-link{color:#0676b9}
+.btn{border-radius:12px}
+.floating-whatsapp{box-shadow:0 8px 24px rgba(0,0,0,.18)}
+/* The source banners are very wide (about 2.74:1). Preserve their complete artwork. */
+.hero-slider-section:has(.purixa-carousel){display:block!important;width:100%!important;height:auto!important;min-height:0!important;padding:0!important;overflow:hidden!important;background:#eaf6fc!important;line-height:0}
+.purixa-carousel{position:relative!important;width:100%!important;height:auto!important;aspect-ratio:2073/758!important;overflow:hidden!important;background:#eaf6fc!important}
+.purixa-slides{position:absolute!important;inset:0!important;width:100%!important;height:100%!important}
+.purixa-carousel .purixa-slide{position:absolute!important;inset:0!important;width:100%!important;height:100%!important;max-width:none!important;object-fit:contain!important;object-position:center center!important;background:#eaf6fc!important}
+.purixa-carousel .carousel-arrow{top:50%;width:42px;height:42px}
+.purixa-carousel .carousel-dots{bottom:10px}
+@media(max-width:720px){
+ .site-header{position:sticky;top:0}
+ .nav-wrap{min-height:68px;gap:10px}
+ .brand{gap:8px;font-size:clamp(13px,3.4vw,17px);min-width:0}
+ .brand img{height:39px;max-width:75px;object-fit:contain}
+ .brand span{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+ .menu-toggle{flex:0 0 auto;font-size:22px;padding:7px 11px}
+ .nav-menu{top:68px}
+ .hero-slider-section:has(.purixa-carousel){height:auto!important;min-height:0!important}
+ .purixa-carousel{height:auto!important;aspect-ratio:2073/758!important;min-height:0!important}
+ .purixa-carousel .purixa-slide{object-fit:contain!important;object-position:center center!important}
+ .purixa-carousel .carousel-arrow{width:32px;height:32px;font-size:16px}
+ .purixa-carousel .carousel-prev{left:7px}.purixa-carousel .carousel-next{right:7px}
+ .purixa-carousel .carousel-dots{bottom:4px;gap:6px;padding:5px 8px}
+ .quick-grid div{padding:15px 8px}
+ .section{padding:56px 0}
+ .service-card,.product-card,.steps>div{border-radius:16px}
 }
+@media(max-width:380px){.brand img{height:34px;max-width:61px}.brand{font-size:12px}.menu-toggle{padding:6px 9px}}
