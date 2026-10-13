@@ -47,3 +47,11 @@ DEPLOYMENT
 Extract this ZIP and upload the CONTENTS of purixa-website-main (not the enclosing folder) to the root of the existing purixa-website repository only after reviewing and approving the package. Keep a copy of the current live files first.
 
 Mobile banner fix v16: mobile viewport uses a taller 280px banner area; wide source image is centered and side-cropped. Desktop remains unchanged.
+
+
+V17 — THREE SLIDING BANNERS
+- Homepage hero now has three user-selected banners (slide1.webp, slide2.webp, slide3.webp).
+- Auto-advances every 5 seconds; previous/next arrows and dots included.
+- Responsive mobile sizing and reduced-motion support included.
+- Existing site sections, forms, contact information, product images and catalogue viewer remain in place.
+- Deploy all ZIP contents to the root of repository purixawater/purixa-website.
