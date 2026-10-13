@@ -585,3 +585,39 @@ footer .footer-social{display:grid;gap:6px;text-align:right}
  .carousel-dots{bottom:9px;gap:8px;padding:7px 10px}
 }
 @media(prefers-reduced-motion:reduce){.purixa-slide{transition:none}}
+
+
+/* V18 correction: definitive responsive styling for the requested three-slide carousel. */
+.hero-slider-section.purixa-hero,
+.hero-slider-section:has(.purixa-carousel) {
+  display:block !important;
+  position:relative !important;
+  width:100% !important;
+  height:clamp(320px, 38vw, 560px) !important;
+  min-height:0 !important;
+  padding:0 !important;
+  overflow:hidden !important;
+  background:#eaf6fc !important;
+}
+.purixa-carousel { position:relative !important; width:100% !important; height:100% !important; overflow:hidden !important; }
+.purixa-slides { position:relative !important; width:100% !important; height:100% !important; }
+.purixa-carousel .purixa-slide {
+  position:absolute !important; inset:0 !important; display:block !important;
+  width:100% !important; height:100% !important; max-width:none !important;
+  object-fit:cover !important; object-position:center center !important;
+  opacity:0 !important; visibility:hidden !important; z-index:0 !important;
+  transition:opacity .65s ease !important;
+}
+.purixa-carousel .purixa-slide.is-active { opacity:1 !important; visibility:visible !important; z-index:1 !important; }
+.purixa-carousel .carousel-arrow { position:absolute; z-index:3; top:50%; transform:translateY(-50%); }
+.purixa-carousel .carousel-prev { left:16px; }
+.purixa-carousel .carousel-next { right:16px; }
+.purixa-carousel .carousel-dots { position:absolute; z-index:3; left:50%; bottom:14px; transform:translateX(-50%); display:flex; gap:9px; }
+@media(max-width:720px) {
+  .hero-slider-section.purixa-hero,
+  .hero-slider-section:has(.purixa-carousel) { height:clamp(230px, 58vw, 340px) !important; }
+  .purixa-carousel .purixa-slide { object-fit:cover !important; object-position:center center !important; }
+  .purixa-carousel .carousel-prev { left:8px; }
+  .purixa-carousel .carousel-next { right:8px; }
+}
+@media(prefers-reduced-motion:reduce) { .purixa-carousel .purixa-slide { transition:none !important; } }

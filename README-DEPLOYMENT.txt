@@ -55,3 +55,9 @@ V17 — THREE SLIDING BANNERS
 - Responsive mobile sizing and reduced-motion support included.
 - Existing site sections, forms, contact information, product images and catalogue viewer remain in place.
 - Deploy all ZIP contents to the root of repository purixawater/purixa-website.
+
+
+V18 CORRECTION
+- Corrected banner order: slide 1 logo + water splash only; slide 2 water + RO products; slide 3 detailed promotional banner.
+- Added a final responsive carousel CSS override to resolve conflicting legacy hero styles.
+- Still requires deployment and real-phone verification; not published automatically.
