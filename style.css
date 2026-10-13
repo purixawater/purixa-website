@@ -622,45 +622,66 @@ footer .footer-social{display:grid;gap:6px;text-align:right}
 }
 @media(prefers-reduced-motion:reduce) { .purixa-carousel .purixa-slide { transition:none !important; } }
 
-
-/* Purixa premium polish + safe responsive banner (October 2026)
-   Keep the existing brand assets and original desktop layout. */
-:root{--purixa-navy:#073b63;--purixa-blue:#087fc1;--purixa-cyan:#37c7ee;--purixa-ink:#17364c;--purixa-muted:#62798a;--purixa-line:#e1edf4;--purixa-soft:#f4faff}
-body{color:var(--purixa-ink);-webkit-font-smoothing:antialiased}
-.site-header{border-bottom:1px solid rgba(7,74,116,.08)}
-.brand{letter-spacing:-.25px}
-.nav-menu a{position:relative;white-space:nowrap}
-.nav-menu a:hover{color:var(--purixa-blue)}
-.nav-menu a:focus-visible,.btn:focus-visible,.menu-toggle:focus-visible,.carousel-arrow:focus-visible,.carousel-dot:focus-visible{outline:3px solid #58d6f5;outline-offset:3px}
-.section-heading h2,.contact-section h2{letter-spacing:-.7px}
-.service-card,.product-card,.steps>div{border-color:var(--purixa-line);box-shadow:0 8px 26px rgba(4,61,93,.055)}
-.service-card,.product-card{border-radius:18px}
-.service-card a,.text-link{color:#0676b9}
-.btn{border-radius:12px}
-.floating-whatsapp{box-shadow:0 8px 24px rgba(0,0,0,.18)}
-/* The source banners are very wide (about 2.74:1). Preserve their complete artwork. */
-.hero-slider-section:has(.purixa-carousel){display:block!important;width:100%!important;height:auto!important;min-height:0!important;padding:0!important;overflow:hidden!important;background:#eaf6fc!important;line-height:0}
-.purixa-carousel{position:relative!important;width:100%!important;height:auto!important;aspect-ratio:2073/758!important;overflow:hidden!important;background:#eaf6fc!important}
-.purixa-slides{position:absolute!important;inset:0!important;width:100%!important;height:100%!important}
-.purixa-carousel .purixa-slide{position:absolute!important;inset:0!important;width:100%!important;height:100%!important;max-width:none!important;object-fit:contain!important;object-position:center center!important;background:#eaf6fc!important}
-.purixa-carousel .carousel-arrow{top:50%;width:42px;height:42px}
-.purixa-carousel .carousel-dots{bottom:10px}
-@media(max-width:720px){
- .site-header{position:sticky;top:0}
- .nav-wrap{min-height:68px;gap:10px}
- .brand{gap:8px;font-size:clamp(13px,3.4vw,17px);min-width:0}
- .brand img{height:39px;max-width:75px;object-fit:contain}
- .brand span{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
- .menu-toggle{flex:0 0 auto;font-size:22px;padding:7px 11px}
- .nav-menu{top:68px}
- .hero-slider-section:has(.purixa-carousel){height:auto!important;min-height:0!important}
- .purixa-carousel{height:auto!important;aspect-ratio:2073/758!important;min-height:0!important}
- .purixa-carousel .purixa-slide{object-fit:contain!important;object-position:center center!important}
- .purixa-carousel .carousel-arrow{width:32px;height:32px;font-size:16px}
- .purixa-carousel .carousel-prev{left:7px}.purixa-carousel .carousel-next{right:7px}
- .purixa-carousel .carousel-dots{bottom:4px;gap:6px;padding:5px 8px}
- .quick-grid div{padding:15px 8px}
- .section{padding:56px 0}
- .service-card,.product-card,.steps>div{border-radius:16px}
+/* Purixa A+B premium brand refresh: luxury details + modern water-blue system */
+:root{--purixa-navy:#062c48;--purixa-blue:#087bc1;--purixa-cyan:#38c5f4;--purixa-ice:#f1f9fe;--purixa-line:#dcecf5;--purixa-shadow:0 16px 42px rgba(5,57,91,.09)}
+html{scroll-padding-top:88px}
+body{color:#183348;letter-spacing:-.005em}
+.site-header{background:rgba(255,255,255,.94);border-bottom:1px solid rgba(210,232,244,.8);box-shadow:0 6px 26px rgba(3,47,77,.07)}
+.nav-wrap{min-height:76px}
+.brand{letter-spacing:-.025em;color:var(--purixa-navy)}
+.brand img{object-fit:contain}
+.nav-menu a{padding:10px 0;position:relative}
+.nav-menu a:after{content:"";position:absolute;left:0;right:100%;bottom:3px;height:2px;border-radius:4px;background:linear-gradient(90deg,var(--purixa-cyan),var(--purixa-blue));transition:right .22s}
+.nav-menu a:hover:after,.nav-menu a:focus-visible:after{right:0}
+/* Explicit carousel layout prevents banners from inheriting unrelated hero-image rules. */
+.hero.hero-slider-section{display:block;min-height:0;height:auto;padding-top:76px;overflow:hidden;background:#edf8fd}
+.purixa-carousel{position:relative;width:100%;overflow:hidden;background:#eaf7fd;isolation:isolate}
+.purixa-slides{position:relative;width:100%;aspect-ratio:1535/600;min-height:260px;max-height:610px;overflow:hidden}
+.purixa-slide{position:absolute;inset:0;width:100%;height:100%;display:block;object-fit:contain;object-position:center center;opacity:0;visibility:hidden;transition:opacity .55s ease;background:#edf8fd}
+.purixa-slide.is-active{opacity:1;visibility:visible}
+.carousel-arrow{position:absolute;top:50%;transform:translateY(-50%);z-index:3;width:44px;height:44px;border:1px solid rgba(255,255,255,.75);border-radius:50%;background:rgba(5,48,78,.62);color:#fff;font-size:20px;display:grid;place-items:center;cursor:pointer;backdrop-filter:blur(8px)}
+.carousel-prev{left:18px}.carousel-next{right:18px}
+.carousel-arrow:hover{background:var(--purixa-blue)}
+.carousel-dots{position:absolute;z-index:3;bottom:14px;left:50%;transform:translateX(-50%);display:flex;gap:8px;padding:8px 11px;border-radius:99px;background:rgba(4,39,63,.35);backdrop-filter:blur(8px)}
+.carousel-dot{width:8px;height:8px;border:0;border-radius:99px;background:rgba(255,255,255,.65);cursor:pointer;padding:0;transition:width .2s,background .2s}
+.carousel-dot.is-active{width:23px;background:#fff}
+.quick-strip{background:linear-gradient(100deg,#063c67,#087bc1);box-shadow:0 12px 28px rgba(4,70,111,.12)}
+.section{padding-top:84px;padding-bottom:84px}
+.section-soft{background:linear-gradient(180deg,#f5fbff,#edf7fc)}
+.section-heading h2,.split h2{letter-spacing:-.035em}
+.service-card,.product-card,.steps>div{border-color:#e0edf5;border-radius:22px;box-shadow:0 8px 26px rgba(6,57,88,.055)}
+.service-card{padding:30px;background:linear-gradient(150deg,#fff,#fbfdff)}
+.icon{background:linear-gradient(145deg,#e5f7ff,#f4fbff);border:1px solid #d8effa;color:var(--purixa-blue)}
+.product-card img{background:linear-gradient(145deg,#f1f9fe,#fff)}
+.product-card>div{padding:24px}
+.tag{display:inline-block;padding:5px 9px;background:#eaf7ff;border-radius:6px;letter-spacing:.1em}
+.btn{border-radius:12px;letter-spacing:-.01em}
+.btn-primary{background:linear-gradient(115deg,#0799db,#075bb0);box-shadow:0 8px 22px rgba(0,119,200,.22)}
+.btn-primary:hover{box-shadow:0 12px 26px rgba(0,119,200,.28)}
+.contact-section{background:radial-gradient(circle at 90% 0,rgba(55,196,245,.22),transparent 33%),linear-gradient(135deg,#062e4d,#087bc1)}
+.contact-info{border-radius:22px;backdrop-filter:blur(10px)}
+footer{background:linear-gradient(120deg,#041f34,#073858)}
+.floating-whatsapp{box-shadow:0 8px 24px rgba(0,0,0,.18);border:3px solid rgba(255,255,255,.88)}
+@media(max-width:900px){
+ .nav-menu{gap:12px}
+ .hero.hero-slider-section{padding-top:68px}
+ .purixa-slides{aspect-ratio:4/3;min-height:0;max-height:none}
+ .purixa-slide{object-fit:contain}
 }
-@media(max-width:380px){.brand img{height:34px;max-width:61px}.brand{font-size:12px}.menu-toggle{padding:6px 9px}}
+@media(max-width:720px){
+ .hero.hero-slider-section{padding-top:58px}
+ .purixa-carousel{background:#f0f9fd}
+ .purixa-slides{aspect-ratio:3/2;min-height:0;max-height:none}
+ .purixa-slide{object-fit:contain;object-position:center;background:#f0f9fd}
+ .carousel-arrow{width:34px;height:34px;font-size:16px}
+ .carousel-prev{left:9px}.carousel-next{right:9px}
+ .carousel-dots{bottom:8px;gap:6px;padding:6px 9px}
+ .carousel-dot{width:6px;height:6px}.carousel-dot.is-active{width:18px}
+ .brand{font-size:14px;max-width:calc(100% - 52px)}
+ .brand img{height:38px;max-width:78px}
+ .section{padding:56px 0}
+ .service-card{padding:23px;border-radius:18px}
+ .product-card{border-radius:18px}
+ .quick-grid div{padding:14px 8px}
+}
+@media(prefers-reduced-motion:reduce){*,*:before,*:after{scroll-behavior:auto!important;transition:none!important}}
