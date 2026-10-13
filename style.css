@@ -621,3 +621,42 @@ footer .footer-social{display:grid;gap:6px;text-align:right}
   .purixa-carousel .carousel-next { right:8px; }
 }
 @media(prefers-reduced-motion:reduce) { .purixa-carousel .purixa-slide { transition:none !important; } }
+
+/* V19: professional finish + prevent wide banner artwork from being cropped on phones */
+:root{scroll-behavior:smooth;scroll-padding-top:86px}
+body{ text-rendering:optimizeLegibility; -webkit-font-smoothing:antialiased }
+.site-header{background:rgba(255,255,255,.97);border-bottom:1px solid #e5eef5;box-shadow:0 6px 24px rgba(4,45,75,.07)}
+.brand{gap:10px;letter-spacing:-.02em}
+.nav-menu a{transition:color .2s ease,background .2s ease}
+.nav-menu a:hover{color:#087bc1;background:#f2f9fe}
+.btn,.text-link,.service-card,.product-card{transition:transform .22s ease,box-shadow .22s ease,background .22s ease}
+.btn:focus-visible,.nav-menu a:focus-visible,.menu-toggle:focus-visible,.carousel-arrow:focus-visible,.carousel-dot:focus-visible{outline:3px solid #42bdf2;outline-offset:3px}
+.section{scroll-margin-top:82px}
+.service-card{padding:25px}
+.service-card .icon{display:grid;place-items:center;width:48px;height:48px;border-radius:15px;background:#eaf7ff;margin-bottom:16px}
+.product-card{border-radius:22px;overflow:hidden}
+.product-card img{background:linear-gradient(145deg,#fbfdff,#edf8ff)}
+.catalog-cta{border:1px solid #d8eaf6;border-radius:24px;padding:26px;background:linear-gradient(120deg,#f7fcff,#eaf6ff)}
+
+/* Mobile banner artwork is extra-wide (about 2.74:1). Show the entire image. */
+@media(max-width:720px){
+  .hero-slider-section.purixa-hero,
+  .hero-slider-section:has(.purixa-carousel){
+    width:100%!important;height:auto!important;min-height:0!important;aspect-ratio:2073/758!important;
+    overflow:hidden!important;background:#eaf6fc!important;
+  }
+  .purixa-carousel,.purixa-slides{width:100%!important;height:100%!important;min-height:0!important;aspect-ratio:2073/758!important}
+  .purixa-carousel .purixa-slide{
+    width:100%!important;height:100%!important;min-width:0!important;min-height:0!important;
+    object-fit:contain!important;object-position:center center!important;background:#eaf6fc!important;
+  }
+  .purixa-carousel .carousel-arrow{width:32px;height:32px;font-size:16px}
+  .purixa-carousel .carousel-prev{left:7px}.purixa-carousel .carousel-next{right:7px}
+  .purixa-carousel .carousel-dots{bottom:5px;gap:6px;padding:5px 8px}
+  .purixa-carousel .carousel-dot{width:7px;height:7px}
+  .section{padding:48px 0}
+  .section-heading h2,.split h2,.contact-section h2{font-size:27px;line-height:1.2}
+  .service-card{padding:21px;border-radius:18px}
+  .catalog-cta{padding:20px;border-radius:18px}
+}
+@media(prefers-reduced-motion:reduce){:root{scroll-behavior:auto}*,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}}
